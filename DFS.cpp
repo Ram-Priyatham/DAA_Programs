@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 vector<int> a[10001];
-int vis[10001];
+int vis[10001]; //to check whether node visited or not
 int dfs(int node)
 {
 	vis[node]=1;
