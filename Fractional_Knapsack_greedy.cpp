@@ -16,9 +16,9 @@ bool cmp(pair<int,float>a, pair<int,float> b)
 int main()
 {
     int n;
-    float weight;
+    float capacity;
     cout<<"Enter maximum capacity: ";
-    cin>>weight;
+    cin>>capacity;
     cout<<"Enter number of items: ";
     cin>>n;
     item arr[n];
@@ -37,7 +37,7 @@ int main()
     sort(v.begin(),v.end(),cmp);
 	cout<<"Object\tWeights used \t Profit"<<endl;
     float max_profit=0;
-    int i=0,capacity=weight,val,cap;
+    int i=0,val,cap;
     while(capacity > 0)
     {
         val=v[i].first;
