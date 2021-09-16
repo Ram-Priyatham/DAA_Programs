@@ -38,7 +38,7 @@ int main()
 	cout<<"Object\tWeights used \t Profit"<<endl;
     float max_profit=0;
     int i=0,val,cap;
-    while(capacity > 0)
+    while(capacity > 0 && i<n)
     {
         val=v[i].first;
         cap=arr[val].w;
