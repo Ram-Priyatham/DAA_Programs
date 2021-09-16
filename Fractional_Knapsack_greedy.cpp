@@ -1,4 +1,5 @@
-//Not completely done
+//Fractional Knapsack using Greedy
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -34,14 +35,26 @@ int main()
     }
     vector<pair<int,float>>v(m.begin(),m.end());
     sort(v.begin(),v.end(),cmp);
-    cout<<"The ratios for corresponding objects :"<<endl;
-    for(auto x:v)
-	  {
-		  cout<<x.first<<" "<<x.second<<endl;
-	  }
+	cout<<"Object\tWeights used \t Profit"<<endl;
     float max_profit=0;
+    int i=0,capacity=weight,val,cap;
     while(capacity > 0)
     {
-        
+        val=v[i].first;
+        cap=arr[val].w;
+        if(cap<capacity)
+        {
+            capacity=capacity-cap;
+            max_profit=max_profit+arr[val].p;
+            cout<<val<<"\t"<<arr[val].w<<"\t    \t"<<arr[val].p<<endl;
+        }
+        else
+        {
+            max_profit+=float(arr[val].p)/capacity;
+            cout<<val<<"\t"<<capacity<<"\t    \t"<<float(arr[val].p)/capacity<<endl;
+            capacity=0;
+        }
+        i++;
     }
+    cout<<"Maximum Profit is "<<max_profit<<endl;
 }
