@@ -46,12 +46,12 @@ int main()
         {
             capacity=capacity-cap;
             max_profit=max_profit+arr[val].p;
-            cout<<val<<"\t"<<arr[val].w<<"\t    \t"<<arr[val].p<<endl;
+            cout<<val<<"\t"<<arr[val].w<<"\t    \t "<<arr[val].p<<endl;
         }
         else
         {
             max_profit+=float(arr[val].p)/capacity;
-            cout<<val<<"\t"<<capacity<<"\t    \t"<<float(arr[val].p)/capacity<<endl;
+            cout<<val<<"\t"<<capacity<<"\t    \t "<<float(arr[val].p)/capacity<<endl;
             capacity=0;
         }
         i++;
