@@ -50,8 +50,9 @@ int main()
         }
         else
         {
-            max_profit+=float(arr[val].p)/capacity;
-            cout<<val<<"\t"<<capacity<<"\t    \t "<<float(arr[val].p)/capacity<<endl;
+            
+            max_profit+=float(v[i].second)*capacity;
+            cout<<val<<"\t"<<capacity<<"\t    \t "<<float(v[i].second)*capacity<<endl;
             capacity=0;
         }
         i++;
